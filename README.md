@@ -10,4 +10,11 @@ We usually give scalars lowercase variable names. For example, we might say “L
 A vector is an array of numbers. The numbers are arranged in order. We can identify each individual number by its index in that ordering. Typically we give vectors lowercase names in bold typeface, such as **x**.  
 We can think of vectors as identifying points in space, with each element giving the coordinate along a diﬀerent axis.  
 ![vector](vector.PNG)  
+  
+# Matrix
+  
+A matrix is a 2-D array of numbers, so each element is identiﬁed by two indices instead of just one. We usually give matrices uppercase
+variable names with bold typeface, such as **A** .  
+If a real-valued matrix **A** has a height of m and a width of n, then we say that **A** has an order of m x n.  
+![Matrix](Matrix.png)  
 
