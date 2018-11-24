@@ -45,7 +45,7 @@ We can subtract a matrix from other, as long as they have the same shape, just b
   
 ![subtraction](subtraction.png)  
   
-**Scalar Addition and Multiplication  
+**Scalar Addition and Multiplication**  
   
 We can also add a scalar to a matrix or multiply a matrix by a scalar, just by performing that operation on each element of a matrix:  
 **D** = a.**B** + c , where D<sub>i,j</sub> = a.B<sub>i,j</sub> + c.  
