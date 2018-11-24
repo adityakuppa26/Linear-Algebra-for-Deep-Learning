@@ -23,5 +23,30 @@ If a real-valued matrix **A** has a height of m and a width of n, then we say th
 # Tensor  
   
 In some cases we will need an array with more than two axes. In the general case, an array of numbers arranged on a regular grid with a variable number of axes is known as a tensor. We denote a tensor named “A” with this typeface : **A**. We identify the element of **A** at coordinates (i,j,k) by writing A<sub>i,j,k</sub> .  
+  
+# Operations on Matrices and Vectors
+  
+**Transpose**  
+The transpose of a matrix is the mirror image of the matrix across a diagonal line, called the main diagonal, running down and to the right, starting from its upper left corner. We denote the transpose of a matrix **A** by **A**<sup>T</sup> and is defined such that  (**A**<sup>T</sup>)<sub>i,j</sub> =  **A**<sub>j,i</sub>.  
+  
+![transpose](transpose.jpg)  
+  
+Vectors can be thought of as matrices that contain only one column. The transpose of a vector is therefore a matrix with only one row.
+  
+**Addition**  
+  
+We can add matrices to each other, as long as they have the same shape, just by adding their corresponding elements :  **C** = **A** + **B** , where C<sub>i,j</sub> = A<sub>i,j</sub> + B<sub>i,j</sub>.  
+  
+![addition](addition.png)  
+  
+**Subtraction**  
+  
+We can subtract a matrix from other, as long as they have the same shape, just by performing subtraction between their corresponding elements :  **C** = **A** - **B** , where C<sub>i,j</sub> = A<sub>i,j</sub> - B<sub>i,j</sub>.  
+  
+![subtraction](subtraction.png)  
+  
+
+
+
 
 
