@@ -33,6 +33,15 @@ The transpose of a matrix is the mirror image of the matrix across a diagonal li
   
 Vectors can be thought of as matrices that contain only one column. The transpose of a vector is therefore a matrix with only one row.
   
+```python3
+import numpy as np
+
+# defining a matrix
+X=np.array([[1,2],[3,4]])
+
+# prints transpose of X
+print(X.T)
+```
 **Addition**  
   
 We can add matrices to each other, as long as they have the same shape, just by adding their corresponding elements :  **C** = **A** + **B** , where C<sub>i,j</sub> = A<sub>i,j</sub> + B<sub>i,j</sub>.  
