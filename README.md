@@ -45,6 +45,17 @@ We can subtract a matrix from other, as long as they have the same shape, just b
   
 ![subtraction](subtraction.png)  
   
+**Scalar Addition and Multiplication  
+  
+We can also add a scalar to a matrix or multiply a matrix by a scalar, just by performing that operation on each element of a matrix:  
+**D** = a.**B** + c , where D<sub>i,j</sub> = a.B<sub>i,j</sub> + c.  
+  
+**Broadcasting**  
+  
+The addition of a matrix and a vector, yields another matrix:  
+**C** = **A** + **b**, where C<sub>i,j</sub> = A<sub>i,j</sub> + b<sub>j</sub>.  In other words, the vector **b** is added to each row of the matrix. This shorthand eliminates the need to deﬁne a matrix with **b** copied into each row before doing the addition. This implicit copying of **b**  to many locations is called broadcasting.  
+  
+
 
 
 
