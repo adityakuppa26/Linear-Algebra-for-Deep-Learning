@@ -48,21 +48,130 @@ We can add matrices to each other, as long as they have the same shape, just by 
   
 ![addition](addition.png)  
   
+```python3
+import numpy as np 
+
+# define matrices 
+X=np.array([[1,2],[3,4]])
+Y=np.array([[5,6],[7,8]])
+
+print(X)
+print(Y)
+
+"""
+[[1 2]                                                                                                                                 
+ [3 4]]  
+ 
+[[5 6]                                                                                                                        
+ [7 8]] 
+"""
+
+# add matrices
+s = X+Y
+
+print(s)
+
+"""
+[[ 6  8]                                                                                                                         
+ [10 12]] 
+"""
+```
+    
 **Subtraction**  
   
 We can subtract a matrix from other, as long as they have the same shape, just by performing subtraction between their corresponding elements :  **C** = **A** - **B** , where C<sub>i,j</sub> = A<sub>i,j</sub> - B<sub>i,j</sub>.  
   
 ![subtraction](subtraction.png)  
   
+```python3
+import numpy as np 
+
+# define matrices 
+X=np.array([[1,2],[3,4]])
+Y=np.array([[5,6],[7,8]])
+
+print(X)
+print(Y)
+
+"""
+[[1 2]                                                                                                                                 
+ [3 4]]  
+ 
+[[5 6]                                                                                                                        
+ [7 8]] 
+"""
+
+# subtract matrices
+s = X-Y
+
+print(s)
+
+"""
+[[ -4  -4]                                                                                                                         
+ [-4 -4]] 
+"""
+```
+  
 **Scalar Addition and Multiplication**  
   
 We can also add a scalar to a matrix or multiply a matrix by a scalar, just by performing that operation on each element of a matrix:  
 **D** = a.**B** + c , where D<sub>i,j</sub> = a.B<sub>i,j</sub> + c.  
   
+```python3
+import numpy as np 
+
+# define matrix
+X=np.array([[1,2],[3,4]])
+
+print(X)
+"""
+[[1 2]                                                                                                                               
+ [3 4]]
+"""
+# scalar multiplication and addition
+s = 2*X + 1
+
+print(s)
+"""
+[[3 5]                                                                                                                                
+ [7 9]]
+"""
+```
+  
 **Broadcasting**  
   
 The addition of a matrix and a vector, yields another matrix:  
 **C** = **A** + **b**, where C<sub>i,j</sub> = A<sub>i,j</sub> + b<sub>j</sub>.  In other words, the vector **b** is added to each row of the matrix. This shorthand eliminates the need to deﬁne a matrix with **b** copied into each row before doing the addition. This implicit copying of **b**  to many locations is called broadcasting.  
+  
+```python3
+import numpy as np 
+
+# define matrices 
+X=np.array([[1,2],[3,4]])
+y=np.array([5,6])
+
+print(X)
+print(y)
+"""
+[[1 2]                                                                                                                                  
+ [3 4]]                                                                                                                                        
+[5 6]
+"""
+
+# broadcasting
+s = X+y
+
+# result
+print(s)
+"""
+[[ 6  8]                                                                                                                            
+ [ 8 10]]
+"""
+```
+  
+
+  
+
   
 
 
