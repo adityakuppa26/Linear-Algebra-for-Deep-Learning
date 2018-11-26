@@ -169,6 +169,53 @@ print(s)
 """
 ```
   
+**Multiplication**  
+  
+One of the most important operations involving matrices is multiplication of two matrices. The matrix product of matrices **A** and **B** is a third matrix **C**. In order for this product to be deﬁned, **A** must have the same number of columns as **B** has rows. If **A** is of shape m × n and **B** is of shape n × p, then **C** is of shape m × p.  
+  
+![multiplication](multiplication.PNG)  
+  
+Note that the standard product of two matrices is not just a matrix containing the product of the individual elements. Such an operation exists and is called the element-wise product, or Hadamard product.  
+  
+* Matrix multiplication is distributive and associative but not commutative.  
+  
+* The transpose of a matrix product has a simple form: (**AB**)<sup>T</sup>= **B**<sup>T</sup>**A**<sup>T</sup>.  
+  
+```python3
+import numpy as np
+
+# defining the matrices 
+X=np.array([[1,2],[3,4]])  # 2 x 2
+Y=np.array([[5,6],[7,8]])  # 2 x 2
+  
+print(X)
+print(Y)
+"""
+[[1 2]                                                                                                                                  
+ [3 4]]                                                                                                                                       
+[[5 6]                                                                                                                                  
+ [7 8]]
+"""
+
+# matrix multiplication
+mres=np.dot(X,Y)  # 2 x 2
+  
+print(mres)
+"""
+[[19 22]                                                                                                                              
+ [43 50]]
+"""
+
+# element-wise multiplication
+eres=np.multiply(X,Y)  # 2 x 2
+
+print(eres)
+"""
+[[ 5 12]                                                                                                                          
+ [21 32]] 
+"""
+```
+  
 
   
 
