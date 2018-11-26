@@ -214,7 +214,64 @@ print(eres)
 [[ 5 12]                                                                                                                          
  [21 32]] 
 """
-```
+```  
+  
+# Identity and Inverse Matrices  
+  
+Linear algebra oﬀers a powerful tool called matrix inversion that enables us to analytically solve system of linear equations **Ax=B** for many values of **A**.  
+  
+**Identity Matrix**  
+  
+An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix. We denote the identity matrix that preserves n-dimensional vectors as **I**<sub>n</sub>.  
+  
+![identity](identity.PNG)  
+  
+The structure of the identity matrix is simple: all the entries along the main diagonal are 1, while all the other entries are zero.  
+  
+**Matrix Inverse**  
+  
+The matrix inverse of **A** is denoted as **A**<sup>−1</sup>, and it is deﬁned as the matrix such that **A**<sup>-1</sup>**A** = **I**.  
+We can now solve the system of equations **Ax=B** as,  
+  
+**Ax = B**  
+**A**<sup>-1</sup>**Ax** = **A**<sup>-1</sup>**B**  
+**I**<sub>n</sub>**x** = **A**<sup>-1</sup>**B**  
+**x** = **A**<sup>-1</sup>**B**  
+  
+```python3
+import numpy as np
+
+# defining an identity matrix
+I=np.identity(3)  # 3 x 3
+
+print(I)
+"""
+[[1. 0. 0.]                                                                                                                            
+ [0. 1. 0.]                                                                                                                           
+ [0. 0. 1.]]
+"""
+A=np.array([[1,2],[3,4]])
+
+# matrix inverse
+Ai=np.linalg.inv(A)
+
+print(A)
+print(Ai)
+print(np.dot(A,Ai))
+"""
+[[1 2]                                                                                                                                 
+ [3 4]]                                                                                                                                      
+[[-2.   1. ]                                                                                                                           
+ [ 1.5 -0.5]]
+ 
+[[1.0000000e+00 0.0000000e+00]                                                                                                        
+ [8.8817842e-16 1.0000000e+00]]
+"""
+```  
+  
+* **A**<sup>−1</sup> is primarily useful as a theoretical tool, however, and should not actually be used in practice for most software applications. Because **A**<sup>−1</sup> can be represented with only limited precision on a digital computer ( can be inferred from the identity matrix obtained as a result of multiplication of A and Ai in the above code ).  
+  
+
   
 
   
