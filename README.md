@@ -218,7 +218,7 @@ print(eres)
   
 # Identity and Inverse Matrices  
   
-Linear algebra oﬀers a powerful tool called matrix inversion that enables us to analytically solve system of linear equations **Ax=B** for many values of **A**.  
+Linear algebra oﬀers a powerful tool called matrix inversion that enables us to analytically solve system of linear equations **Ax=b** for many values of **A**.  
   
 **Identity Matrix**  
   
@@ -231,12 +231,12 @@ The structure of the identity matrix is simple: all the entries along the main d
 **Matrix Inverse**  
   
 The matrix inverse of **A** is denoted as **A**<sup>−1</sup>, and it is deﬁned as the matrix such that **A**<sup>-1</sup>**A** = **I**.  
-We can now solve the system of equations **Ax=B** as,  
+We can now solve the system of equations **Ax=b** as,  
   
-**Ax = B**  
-**A**<sup>-1</sup>**Ax** = **A**<sup>-1</sup>**B**  
-**I**<sub>n</sub>**x** = **A**<sup>-1</sup>**B**  
-**x** = **A**<sup>-1</sup>**B**  
+**Ax = b**  
+**A**<sup>-1</sup>**Ax** = **A**<sup>-1</sup>**b**  
+**I**<sub>n</sub>**x** = **A**<sup>-1</sup>**b**  
+**x** = **A**<sup>-1</sup>**b**  
   
 ```python3
 import numpy as np
@@ -270,6 +270,38 @@ print(np.dot(A,Ai))
 ```  
   
 * **A**<sup>−1</sup> is primarily useful as a theoretical tool, however, and should not actually be used in practice for most software applications. Because **A**<sup>−1</sup> can be represented with only limited precision on a digital computer ( can be inferred from the identity matrix obtained as a result of multiplication of A and Ai in the above code ).  
+  
+# Linear dependence and Span  
+  
+**Linear Combination**  
+  
+Formally, a linear combination of some set of vectors {v<sup>(1)</sup>, . . . , v<sup>(n)</sup>} is given by multiplying each vector v<sup>(i)</sup> by a corresponding scalar coeﬃcient and adding the results.  
+  
+![linearcomb](linearcomb.PNG)  
+  
+**Span**  
+  
+The span of a set of vectors is the set of all points obtainable by linear combination of the original vectors.  
+Determining whether **Ax**=**b** has a solution thus amounts to testing whether **b**  is in the span of the columns of **A**.  
+  
+**Linear Dependence**  
+  
+A set of vectors is linearly dependent if atleast one vector in the set is a linear combination of the other vectors.  
+A set of vectors is linearly independent if no vector in the set is a linear combination of the other vectors.  
+If we add a vector to a set that is a linear combination of the other vectors in the set, the new vector does not add any points to the set’s span.  
+  
+# When is a matrix invertible ?  
+  
+For **A**<sup>−1</sup> to exist, equation **Ax=b** must have exactly one solution for every value of **b**.  
+This means that the matrix must be square, that is, we require that m = n ( no. of unknowns = no. of equations ) and that all the columns be linearly independent( i.e A should be non-singular ) .  
+  
+* A square matrix with linearly dependent columns is known as singular.
+  
+* If **A** is not square or is square but singular, solving the equation is still possible, but we cannot use the method of matrix inversion to ﬁnd the solution.  
+  
+
+
+
   
 
   
