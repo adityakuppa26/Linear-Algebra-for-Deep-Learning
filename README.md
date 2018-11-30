@@ -299,6 +299,27 @@ This means that the matrix must be square, that is, we require that m = n ( no. 
   
 * If **A** is not square or is square but singular, solving the equation is still possible, but we cannot use the method of matrix inversion to ﬁnd the solution.  
   
+# Norms  
+  
+Sometimes we need to measure the size of a vector. In machine learning, we usually measure the size of vectors using a function called a
+norm. Formally, the L<sup>P</sup> norm is given by,  
+  
+![norm](norm.PNG)  
+  
+Norms, including the L<sup>p</sup> norm, are functions mapping vectors to non-negative values. On an intuitive level, the norm of a vector x measures the distance from the origin to the point x.  
+  
+The **L<sup>2</sup> norm**, with p = 2, is known as the Euclidean norm, which is simply the Euclidean distance from the origin to the point identiﬁed by x. The L<sup>2</sup> norm is used so frequently in machine learning. In many contexts, the squared L<sup>2</sup>norm may be undesirable because it increases very slowly near the origin.  
+  
+The **L<sup>1</sup> norm** may be simpliﬁed to,  
+  
+![L1](L1.png)  
+  
+The L<sup>1</sup> norm is commonly used in machine learning when the diﬀerence between zero and nonzero elements is very important. Every time an element of x moves away from 0 by q, the L<sup>1</sup>norm increases by q.  
+  
+
+
+
+  
 
 
 
