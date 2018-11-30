@@ -312,7 +312,7 @@ The **L<sup>2</sup> norm**, with p = 2, is known as the Euclidean norm, which is
   
 The **L<sup>1</sup> norm** may be simpliﬁed to,  
   
-![L1](L1.png)  
+![L1](L1.PNG)  
   
 The L<sup>1</sup> norm is commonly used in machine learning when the diﬀerence between zero and nonzero elements is very important. Every time an element of x moves away from 0 by q, the L<sup>1</sup>norm increases by q.  
   
