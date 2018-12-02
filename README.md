@@ -316,6 +316,20 @@ The **L<sup>1</sup> norm** may be simpliﬁed to,
   
 The L<sup>1</sup> norm is commonly used in machine learning when the diﬀerence between zero and nonzero elements is very important. Every time an element of x moves away from 0 by q, the L<sup>1</sup>norm increases by q.  
   
+One other norm that commonly arises in machine learning is theL<sup>∞</sup> norm, also known as the **max norm**. This norm simpliﬁes to the absolute value of the element with the largest magnitude in the vector,  
+  
+![max](max.PNG)  
+  
+Sometimes we may also wish to measure the size of a matrix. In the context of deep learning, the most common way to do this is with the otherwise obscure **Frobenius norm** :  
+  
+![frobenius](frobenius.PNG)  
+  
+which is analogous to the L<sup>2</sup> norm of a vector.  
+  
+
+  
+
+  
 
 
 
