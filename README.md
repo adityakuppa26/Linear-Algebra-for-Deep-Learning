@@ -326,6 +326,29 @@ Sometimes we may also wish to measure the size of a matrix. In the context of de
   
 which is analogous to the L<sup>2</sup> norm of a vector.  
   
+# Special kinds of matrices and vectors  
+  
+**Diagonal** matrices  consist mostly of zeros and have nonzero entries only along the main diagonal. Formally, a matrix **D** is diagonal if and only if D<sub>i,j</sub> = 0 for all i != j.  
+  
+A **symmetric** matrix is any matrix that is equal to its own transpose:  
+  
+**A** = **A<sup>T</sup>**  
+  
+A **unit** vector is a vector with unit norm.  
+  
+![unitvector](unitvector.PNG)  
+  
+A vector **x** and a vector **y** are **orthogonal** to each other if **x**<sup>T</sup>**y** = 0.  
+If the vectors not only are orthogonal but also have unit norm, we call them **orthonormal**.  
+  
+An **orthogonal matrix** is a square matrix whose rows are mutually orthonormal and whose columns are mutually orthonormal:  
+  
+![orthomatrix](orthomatrix.PNG)  
+  
+
+
+
+  
 
   
 
