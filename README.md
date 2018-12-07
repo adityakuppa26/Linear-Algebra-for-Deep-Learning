@@ -351,6 +351,9 @@ An **orthogonal matrix** is a square matrix whose rows are mutually orthonormal 
    
  ![trace](trace.PNG)  
    
+ 
+ ![trace](trace2.PNG)  
+   
 The trace operator is useful for a variety of reasons. Some operations that are diﬃcult to specify without resorting to summation notation can be speciﬁed using matrix products and the trace operator. For example, the trace operator provides an alternative way of writing the Frobenius norm of a matrix:  
   
 ![traceeg](traceeg.PNG)  
